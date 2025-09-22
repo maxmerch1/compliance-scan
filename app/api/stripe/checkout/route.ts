@@ -8,7 +8,7 @@ const stripeSecretKey = process.env.STRIPE_SECRET_KEY
 const isUsingPlaceholderKey = !stripeSecretKey || stripeSecretKey.includes('placeholder')
 
 const stripe = new Stripe(stripeSecretKey || 'sk_test_placeholder', {
-  apiVersion: '2024-06-20',
+  apiVersion: '2025-08-27.basil',
   appInfo: {
     name: "california-compliance-framework",
     version: "1.0.0",
