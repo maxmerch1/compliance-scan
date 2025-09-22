@@ -46,19 +46,6 @@ function ScanSimulation({ url, onComplete }: { url: string, onComplete: () => vo
     "Finalizing results..."
   ]
 
-  // Debug feature: Press Enter to skip to results
-  useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.key === 'Enter') {
-        event.preventDefault()
-        setIsComplete(true)
-        setTimeout(() => onComplete(), 500)
-      }
-    }
-
-    document.addEventListener('keydown', handleKeyPress)
-    return () => document.removeEventListener('keydown', handleKeyPress)
-  }, [onComplete])
 
   useEffect(() => {
     if (isComplete) return
